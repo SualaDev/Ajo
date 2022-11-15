@@ -90,4 +90,19 @@ export default {
   width: 451px;
   height: 23px;
 }
+@media only screen and (max-width: 1300px){
+  .images{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8.3rem
+  }
+  .text{
+    position: absolute;
+    top: 590px;
+    left: 400px;
+    text-align: center;
+    padding: 0 2rem;
+    background-color: #FFF;
+  }
+}
 </style>

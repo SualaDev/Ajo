@@ -108,4 +108,21 @@ p {
   font-family: 'Cereal Book';
   font-weight: 400;
 }
+@media only screen and (max-width: 1300px){
+  .first-card{
+    display: flex;
+    flex-direction: column;
+    row-gap:10rem
+  }
+  .second-card{
+    display: flex;
+    flex-direction: column;
+    row-gap:19.75rem
+  }
+  .third-card{
+    display: flex;
+    flex-direction: column;
+    row-gap:6rem
+  }
+}
 </style>

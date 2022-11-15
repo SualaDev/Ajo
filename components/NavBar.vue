@@ -128,7 +128,7 @@ button{
   position: absolute;
   height: 286px;
   width: 359px;
-  left: 40px;
+  left: 100px;
   top: 171px;
 }
 .nav{
@@ -146,21 +146,33 @@ a{
 a.nuxt-link-exact-active{
   border-bottom: 1px solid #FCF300;
 }
-@media only screen and (max-width: 1400px) {
-.world{
-  background-image: url(~assets/images/world.svg);
-  position: absolute;
-  height: 286px;
-  width: 359px;
-  left: 40px;
-  top: 171px;
+@media only screen and (max-width: 1100px){
+  .nav,.world{
+    display: none;
+  }
 }
+@media only screen and (min-width: 1200px){
+  .logo{
+    /* margin-left: 8rem; */
+    padding-right: 210px;
+  }
+  .nav{
+  background-image: url(~assets/images/nav.svg);
+  position: absolute;
+  width: 295px;
+  height: 503px;
+  left: 860px;
+  top: 192px;
+}
+
+}
+@media only screen and (min-width: 1300px) {
 .nav{
   background-image: url(~assets/images/nav.svg);
   position: absolute;
   width: 295px;
   height: 503px;
-  left: 905px;
+  left: 920px;
   top: 192px;
 }
 }
