@@ -1,12 +1,10 @@
-import { mapState } from 'vuex';
-import axios from "axios"
-
-
+import { mapState } from 'vuex'
+import axios from 'axios'
 
 export default {
-  //generate dynamic links
-  
-  generate:{
+  // generate dynamic links
+
+  generate: {
     // async routes() {
     //       let cityDistArray = []
     //       const routeArray = await axios.get('https://ajo-app.herokuapp.com/api/top-cities') || [];
@@ -14,30 +12,34 @@ export default {
     //         console.log(city.city);
     //         cityDistArray.push('/' + city.city)
     //       })
-          
-    //     },
-    async routes(){
-      const routeArrayRes = await axios.get('https://ajo-app.herokuapp.com/api/top-cities') || [];
 
-      const routeArray =  routeArrayRes?.data?.data?.map((city) => {
-        return{
-          route: "/" + city.city
+    //     },
+    async routes () {
+      const routeArrayRes = await axios.get('https://ajo-app.herokuapp.com/api/top-cities') || []
+
+      const routeArray = routeArrayRes?.data?.data?.map((city) => {
+        return {
+          route: '/' + city.city
         }
       })
-     
-      const placeArrayRes = await axios.get('https://ajo-app.herokuapp.com/api/places/search/popular/') || [];
+
+      const placeArrayRes = await axios.get('https://ajo-app.herokuapp.com/api/places/search/popular/') || []
       const placeArray = placeArrayRes?.data?.data?.map((place) => {
-        return{
+        return {
           route: '/explore/' + place.fullSearchResult.place_id
         }
       })
 
       const routes = routeArray.concat(placeArray)
       return routes
-    },
+    }
   },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  ssr: false,
+  generate: {
+    fallback: true
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -46,15 +48,15 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap',
-      },
-    ],
+        href: 'https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap'
+      }
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -63,7 +65,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/vuex-persist', ssr: false },
-    { src: '~/plugins/vue-toasted', ssr: false },
+    { src: '~/plugins/vue-toasted', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -76,7 +78,7 @@ export default {
   ],
 
   styleResources: {
-    scss: ['~/assets/styles/mixins.scss'],
+    scss: ['~/assets/styles/mixins.scss']
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -88,41 +90,41 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
-    //Nuxt Fontawesome
+    // Nuxt Fontawesome
     [
       'nuxt-fontawesome',
       {
         imports: [
           {
             set: '@fortawesome/free-solid-svg-icons',
-            icons: ['fas'],
+            icons: ['fas']
           },
           {
             set: '@fortawesome/free-regular-svg-icons',
-            icons: ['far'],
+            icons: ['far']
           },
           {
             set: '@fortawesome/free-brands-svg-icons',
-            icons: ['fab'],
-          },
-        ],
-      },
-    ],
+            icons: ['fab']
+          }
+        ]
+      }
+    ]
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
 
-    baseURL: 'https://ajo-app.herokuapp.com/api/',
+    baseURL: 'https://ajo-app.herokuapp.com/api/'
   },
   // Authentication Strategies
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en',
-    },
+      lang: 'en'
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -130,5 +132,5 @@ export default {
 
   // Transitions
 
-  pageTransition: 'page',
+  pageTransition: 'page'
 }
