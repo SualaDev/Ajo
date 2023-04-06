@@ -99,7 +99,7 @@ export default {
     column-gap: 50px !important;
   }
 }
-@media only screen and (max-width: 610px){
+@media only screen and (max-width: 611px){
   .logo{
     display: none;
   }
