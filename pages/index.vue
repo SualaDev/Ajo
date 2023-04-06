@@ -35,7 +35,7 @@ export default {
 .phones {
   background-image: url(~assets/images/phone.png);
   position: absolute;
-  width: 580.49px;
+  width: 580.50px;
   height: 701.75px;
   top: 443px;
   left: 0;
