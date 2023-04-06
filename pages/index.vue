@@ -1,7 +1,12 @@
 <template lang="">
   <main>
     <div class="main-container">
-      <NavBar />
+      <div class="navbar">
+        <NavBar />
+      </div>
+      <div class="responsive-nav">
+        <ResponsiveNavBar />
+      </div>
       <div class="container">
         <div class="background-images">
           <div class="phones" />
@@ -16,7 +21,8 @@
   </main>
 </template>
 <script>
-export default {}
+export default {
+}
 </script>
 <style lang="scss" scoped>
 .main-container {
@@ -45,5 +51,28 @@ export default {}
   left: 0;
   right: 0;
   margin: auto;
+}
+@media screen and (max-width: 850px){
+  .responsive-nav{
+    display: block;
+  }
+  .navbar{
+    display: none;
+  }
+}
+@media screen and (min-width: 851px){
+  .responsive-nav{
+    display: none;
+  }
+}
+@media screen and (max-width: 770px){
+  .phones{
+    display: none;
+  }
+}
+@media screen and (max-width: 500px){
+  .store{
+    display: none;
+  }
 }
 </style>

@@ -10,8 +10,7 @@
               Bernice Semiu
             </h2>
             <p class="details">
-              Ajo is very helpful and super easy to use, I had no issues finding
-              local attractions and hot spots.
+              Ajo is great.
             </p>
           </div>
           <div v-if="clicked % 2 == 1" class="text">
@@ -91,7 +90,6 @@ export default {
 }
 .forward-btn {
   background-image: url(~assets/images/forward-btn.svg);
-  color: #fdf86b;
   width: 80px;
   height: 80px;
   margin-top: 60px;
@@ -127,5 +125,28 @@ export default {
   line-height: 36px;
   font-family: 'Cereal Light';
   font-weight: 300;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1100px){
+  .content-container{
+    column-gap: 2rem !important;
+  }
+}
+@media only screen and (max-width: 880px){
+  .content{
+    width: 33rem;
+    padding: 56px 93px 108px 117px;
+  }
+}
+@media only screen and (max-width: 760px){
+  .content{
+    width: 20rem;
+    padding: 56px 50px 56px 114px;
+  }
+}
+@media only screen and (max-width: 630px){
+  .forward-btn,.back-btn{
+    display: none;
+  }
 }
 </style>

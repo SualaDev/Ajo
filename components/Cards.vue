@@ -116,13 +116,20 @@ p {
   }
   .second-card{
     display: flex;
-    flex-direction: column;
-    row-gap:19.75rem
+    flex-direction: column-reverse;
+    row-gap:7rem
   }
   .third-card{
     display: flex;
     flex-direction: column;
     row-gap:6rem
+  }
+}
+@media screen and (max-width: 600px){
+  .location,.phone,.world{
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 }
 </style>

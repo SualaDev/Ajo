@@ -1,6 +1,11 @@
 <template>
   <div>
     <div class="first-segment">
+      <div class="text">
+        <h2 class="text-header">
+          We understand, exploring cities can be hard
+        </h2>
+      </div>
       <div class="images">
         <div class="road-sign">
           <div class="image-1" />
@@ -14,9 +19,6 @@
           <div class="image-3" />
           <p>Missing out a lot of fun activities and attractions.</p>
         </div>
-      </div>
-      <div class="text">
-        <h2>We understand, exploring cities can be hard</h2>
       </div>
     </div>
   </div>
@@ -103,6 +105,66 @@ export default {
     text-align: center;
     padding: 0 2rem;
     background-color: #FFF;
+  }
+}
+@media only screen and (max-width: 1200px){
+  .text{
+    position: absolute;
+    top: 590px;
+    left: 400px;
+    text-align: center;
+    padding: 0 2rem;
+    background-color: #FFF;
+  }
+}
+@media only screen and (max-width: 1100px){
+  .text{
+    position: absolute;
+    top: 590px;
+    left: 240px;
+    text-align: center;
+    padding: 0 2rem;
+    background-color: #FFF;
+  }
+}
+@media screen and (max-width: 850px){
+  .text{
+    position: absolute;
+    top: 590px;
+    left: 170px;
+    text-align: center;
+    padding: 0 2rem;
+    background-color: #FFF;
+  }
+}
+@media screen and (max-width: 720px){
+  .text{
+    position: absolute;
+    top: 590px;
+    left: 120px;
+    text-align: center;
+    padding: 0 2rem;
+    background-color: #FFF;
+  }
+}
+@media screen and (max-width: 550px){
+  .text{
+    position: absolute;
+    top: 590px;
+    left: 60px;
+    text-align: center;
+    padding: 0 2rem;
+    background-color: #FFF;
+  }
+}
+@media screen and (max-width: 500px){
+  .text{
+    top: 490px;
+    left: 20px;
+  }
+  .text-header{
+    font-size: 1.3rem;
+    max-width: 290px;
   }
 }
 </style>

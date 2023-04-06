@@ -89,4 +89,19 @@ export default {
   font-family: 'Cereal Light';
   font-weight: 300;
 }
+@media only screen and (max-width: 1100px){
+  .content{
+    column-gap: 130px !important;
+  }
+}
+@media only screen and (max-width: 690px){
+  .content{
+    column-gap: 50px !important;
+  }
+}
+@media only screen and (max-width: 610px){
+  .logo{
+    display: none;
+  }
+}
 </style>
